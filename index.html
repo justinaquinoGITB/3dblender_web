@@ -2,13 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blank Page</title>
+    <title>GLTF Viewer</title>
+    <style>
+        /* Set background color to black */
+        body {
+            background-color: black;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
 </head>
 <body>
+    <!-- glTF viewer -->
     <gltf-viewer width="1000" height="1000" interactive src="231103 Fighter Redesign C 03.glb"></gltf-viewer>
-    <!-- This is where you can add your content -->
 
+    <!-- Include the necessary scripts for the glTF viewer -->
+    <script src="https://unpkg.com/three@0.132.2/build/three.min.js"></script>
+    <script src="https://unpkg.com/@gltf-viewer/viewer@1.0.2/dist/gltf-viewer.min.js"></script>
 </body>
 </html>
