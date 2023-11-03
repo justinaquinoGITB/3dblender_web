@@ -14,14 +14,37 @@
             align-items: center;
             height: 100vh;
         }
+        /* Style for the white text */
+        .info-text {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
+    
+     <!-- White text -->
+    <div class="info-text">3D Asset for viewing should be Visible Here</div>
+
     <!-- glTF viewer -->
     <gltf-viewer width="1000" height="1000" interactive src="231103 Fighter Redesign C 03.glb"></gltf-viewer>
 
     <!-- Include the necessary scripts for the glTF viewer -->
     <script src="https://unpkg.com/three@0.132.2/build/three.min.js"></script>
     <script src="https://unpkg.com/@gltf-viewer/viewer@1.0.2/dist/gltf-viewer.min.js"></script>
+
+<script type="module">
+  import * as THREE from 'three';
+  import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+  import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+  // Your three.js scene, camera, renderer, etc. goes here.
+  const controls = new OrbitControls(camera, renderer.domElement);
+  const loader = new GLTFLoader();
+  // ... rest of your code
+</script>
+
+    
 </body>
 </html>
